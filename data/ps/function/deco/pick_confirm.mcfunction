@@ -8,6 +8,7 @@ execute if score #click_locked ps matches 1 run return -1
 execute unless data storage ps:tmp selecting_deco run function ps:deco/player_quit
 execute unless data storage ps:tmp selecting_deco run return -1
 
+execute if score #deco_picktype ps matches 2 as @e[type=interaction,tag=customer,distance=..50] run function ps:customer/change_outfit
 function ps:deco/player_restore
 tag @e[type=item_display,distance=..10,tag=deco_target] remove deco_target
 scoreboard players reset #deco_picking ps

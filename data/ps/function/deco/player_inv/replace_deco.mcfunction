@@ -1,4 +1,4 @@
-setblock 0 -64 0 shulker_box{Items:[{id:"stone",Slot:0b,count:1},{id:"stone",Slot:1b,count:1},{id:"stone",Slot:2b,count:1},{id:"stone",Slot:3b,count:1},{id:"stone",Slot:4b,count:1},{id:"stone",Slot:5b,count:1},{id:"stone",Slot:6b,count:1},{id:"stone",Slot:7b,count:1},{id:"stone",Slot:8b,count:1}]}
+setblock 0 -64 0 white_shulker_box{Items:[{id:"stone",Slot:0b,count:1},{id:"stone",Slot:1b,count:1},{id:"stone",Slot:2b,count:1},{id:"stone",Slot:3b,count:1},{id:"stone",Slot:4b,count:1},{id:"stone",Slot:5b,count:1},{id:"stone",Slot:6b,count:1},{id:"stone",Slot:7b,count:1},{id:"stone",Slot:8b,count:1}]}
 data modify block 0 -64 0 Items[{Slot:0b}] merge from storage ps:game unlocks.deco.0.item
 data modify block 0 -64 0 Items[{Slot:1b}] merge from storage ps:game unlocks.deco.1.item
 data modify block 0 -64 0 Items[{Slot:2b}] merge from storage ps:game unlocks.deco.2.item

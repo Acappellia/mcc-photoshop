@@ -18,5 +18,6 @@ execute unless data storage ps:ani available run data modify storage ps:ani avai
 function ps:inits/animate_data
 execute unless data storage ps:game unlocks run function ps:inits/unlocks
 execute unless data storage ps:game current_deco run data modify storage ps:game current_deco set value {deco_a:0,deco_b:0,deco_c:0,deco_d:0,bg:0,outfit:0}
+execute unless data storage ps:game current_customer run data modify storage ps:game current_customer set value {hair:0,beard:0,eyes:0,tops:0,bottoms:0,special:0}
 
 forceload add 0 0 0 0
