@@ -1,0 +1,1 @@
+execute if data storage ps:ani frame_list[0] run function ps:animation/tick
