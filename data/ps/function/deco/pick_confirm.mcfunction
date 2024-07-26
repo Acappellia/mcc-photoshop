@@ -13,3 +13,5 @@ execute if score #deco_picktype ps matches 2 as @e[type=interaction,tag=customer
 function ps:deco/player_restore
 tag @e[type=item_display,distance=..10,tag=deco_target] remove deco_target
 scoreboard players reset #deco_picking ps
+
+tellraw @a "111"
