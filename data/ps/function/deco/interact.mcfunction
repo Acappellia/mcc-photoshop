@@ -1,7 +1,9 @@
 advancement revoke @s only ps:interact_deco
 
-execute if entity @s[tag=deco_user] run function ps:deco/pick_confirm
-execute if entity @s[tag=deco_user] run return -1
+scoreboard players reset #player_confirm_click ps 
+execute if entity @s[tag=deco_user] run scoreboard players set #player_confirm_click ps 1
+execute if score #player_confirm_click ps matches 1 run function ps:deco/pick_confirm
+execute if score #player_confirm_click ps matches 1 run return -1
 
 execute if score #deco_picking ps matches 1 run tellraw @s [{"selector": "@a[tag=deco_user]"},{"text": "已经在布置影棚了..."}]
 execute if score #deco_picking ps matches 1 run return -1
