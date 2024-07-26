@@ -11,45 +11,309 @@ data modify storage ps:ani_data data[-1].parts.part_5 set value {name:"left_leg"
 data modify storage ps:ani_data data[-1].parts.part_6 set value {name:"right_leg",init_pos:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],custom_model_data:1006,firework_color:114514}
 #set 1st frame
 data modify storage ps:ani_data data[-1].frames append value {}
-data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
 #append another frame
 data modify storage ps:ani_data data[-1].frames append value {}
-data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-#if the following line is added, the entity will be tped forward for a certain distance in this frame
-#the value here does not affect the distance, it was configured elsewhere
-data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
-#...
-#if this frame is not key frame, don't skip and add an empty frame
-data modify storage ps:ani_data data[-1].frames append value {}
-#...
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]}
+
 #append last frame
 data modify storage ps:ani_data data[-1].frames append value {}
-data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
-data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:-1,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2]}
 data modify storage ps:ani_data data[-1].frames[-1].is_last set value 1
 #add the following line in last frame if another animation should play after this
 #ani_id value is the animation id in this definition file, starting from 0
 #ani_id can be self to create a loop animation
 #don't add anything if this is a one_time animation
 data modify storage ps:ani_data data[-1].frames[-1].next set value {ani_id:0}
-#add the following line in last frame if the entity should be keep static when animation ends instead of killing it
-#note: the entity will be untracked if not killed
-data modify storage ps:ani_data data[-1].frames[-1].keep_alive set value 1
 
-#append another animation type
-data modify storage ps:ani_data data append value {ani_tag:"car"}
-#...
+#init data
+data modify storage ps:ani_data data append value {ani_tag:"kukii",height:1.8,width:0.8}
+
+data modify storage ps:ani_data data[-1].parts.part_1 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+data modify storage ps:ani_data data[-1].parts.part_2 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+data modify storage ps:ani_data data[-1].parts.part_3 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+data modify storage ps:ani_data data[-1].parts.part_4 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.900000, -0.000000, 1.237500, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+data modify storage ps:ani_data data[-1].parts.part_5 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.900000, 0.000000, 1.237500, 0.000000, -0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+data modify storage ps:ani_data data[-1].parts.part_6 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+data modify storage ps:ani_data data[-1].parts.part_7 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+data modify storage ps:ani_data data[-1].parts.part_8 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+data modify storage ps:ani_data data[-1].parts.part_9 set value {name:"body",init_pos:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000],custom_model_data:1001,firework_color:114514}
+
+#frame 0
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.900000, -0.000000, 1.237500, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.900000, 0.000000, 1.237500, 0.000000, -0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 1
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.892475, -0.116137, 0.675000, 0.000000, 0.116137, 0.892475, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.892475, 0.116137, 0.675000, 0.000000, -0.116137, 0.892475, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.898117, 0.058190, 1.237500, 0.000000, -0.058190, 0.898117, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.898117, -0.058190, 1.237500, 0.000000, 0.058190, 0.898117, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 2
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.863890, -0.252375, 0.675000, 0.000000, 0.252375, 0.863890, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.863890, 0.252375, 0.675000, 0.000000, -0.252375, 0.863890, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.890927, 0.127473, 1.237500, 0.000000, -0.127473, 0.890927, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.890927, -0.127473, 1.237500, 0.000000, 0.127473, 0.890927, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 3
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.822739, -0.364829, 0.675000, 0.000000, 0.364829, 0.822739, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.822739, 0.364829, 0.675000, 0.000000, -0.364829, 0.822739, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.880473, 0.186460, 1.237500, 0.000000, -0.186460, 0.880473, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.880473, -0.186460, 1.237500, 0.000000, 0.186460, 0.880473, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 4
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.790547, -0.430157, 0.675000, 0.000000, 0.430157, 0.790547, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.790547, 0.430157, 0.675000, 0.000000, -0.430157, 0.790547, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.872208, 0.221932, 1.237500, 0.000000, -0.221932, 0.872208, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.872208, -0.221932, 1.237500, 0.000000, 0.221932, 0.872208, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 5
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.779423, -0.450000, 0.675000, 0.000000, 0.450000, 0.779423, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.779423, 0.450000, 0.675000, 0.000000, -0.450000, 0.779423, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.869333, 0.232937, 1.237500, 0.000000, -0.232937, 0.869333, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.869333, -0.232937, 1.237500, 0.000000, 0.232937, 0.869333, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 6
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.799633, -0.413021, 0.675000, 0.000000, 0.413021, 0.799633, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.799633, 0.413021, 0.675000, 0.000000, -0.413021, 0.799633, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.874548, 0.212521, 1.237500, 0.000000, -0.212521, 0.874548, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.874548, -0.212521, 1.237500, 0.000000, 0.212521, 0.874548, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 7
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.835517, -0.334531, 0.675000, 0.000000, 0.334531, 0.835517, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.835517, 0.334531, 0.675000, 0.000000, -0.334531, 0.835517, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.883732, 0.170345, 1.237500, 0.000000, -0.170345, 0.883732, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.883732, -0.170345, 1.237500, 0.000000, 0.170345, 0.883732, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 8
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.869071, -0.233914, 0.675000, 0.000000, 0.233914, 0.869071, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.869071, 0.233914, 0.675000, 0.000000, -0.233914, 0.869071, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.892234, 0.117975, 1.237500, 0.000000, -0.117975, 0.892234, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.892234, -0.117975, 1.237500, 0.000000, 0.117975, 0.892234, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 9
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.891947, -0.120130, 0.675000, 0.000000, 0.120130, 0.891947, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.891947, 0.120130, 0.675000, 0.000000, -0.120130, 0.891947, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.897984, 0.060200, 1.237500, 0.000000, -0.060200, 0.897984, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.897984, -0.060200, 1.237500, 0.000000, 0.060200, 0.897984, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 10
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.900000, 0.000001, 0.675000, 0.000000, -0.000001, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.900000, -0.000001, 0.675000, 0.000000, 0.000001, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.900000, -0.000001, 1.237500, 0.000000, 0.000001, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.900000, 0.000001, 1.237500, 0.000000, -0.000001, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 11
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.891947, 0.120130, 0.675000, 0.000000, -0.120130, 0.891947, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.891947, -0.120130, 0.675000, 0.000000, 0.120130, 0.891947, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.897984, -0.060200, 1.237500, 0.000000, 0.060200, 0.897984, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.897984, 0.060200, 1.237500, 0.000000, -0.060200, 0.897984, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 12
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.869071, 0.233914, 0.675000, 0.000000, -0.233914, 0.869071, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.869071, -0.233914, 0.675000, 0.000000, 0.233914, 0.869071, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.892234, -0.117975, 1.237500, 0.000000, 0.117975, 0.892234, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.892234, 0.117975, 1.237500, 0.000000, -0.117975, 0.892234, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 13
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.835517, 0.334531, 0.675000, 0.000000, -0.334531, 0.835517, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.835517, -0.334531, 0.675000, 0.000000, 0.334531, 0.835517, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.883732, -0.170345, 1.237500, 0.000000, 0.170345, 0.883732, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.883732, 0.170345, 1.237500, 0.000000, -0.170345, 0.883732, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 14
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.799633, 0.413021, 0.675000, 0.000000, -0.413021, 0.799633, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.799633, -0.413021, 0.675000, 0.000000, 0.413021, 0.799633, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.874548, -0.212521, 1.237500, 0.000000, 0.212521, 0.874548, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.874548, 0.212521, 1.237500, 0.000000, -0.212521, 0.874548, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 15
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.779423, 0.450000, 0.675000, 0.000000, -0.450000, 0.779423, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.779423, -0.450000, 0.675000, 0.000000, 0.450000, 0.779423, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.869333, -0.232937, 1.237500, 0.000000, 0.232937, 0.869333, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.869333, 0.232937, 1.237500, 0.000000, -0.232937, 0.869333, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 16
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.790547, 0.430157, 0.675000, 0.000000, -0.430157, 0.790547, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.790547, -0.430157, 0.675000, 0.000000, 0.430157, 0.790547, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.872208, -0.221932, 1.237500, 0.000000, 0.221932, 0.872208, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.872208, 0.221932, 1.237500, 0.000000, -0.221932, 0.872208, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 17
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.822739, 0.364829, 0.675000, 0.000000, -0.364829, 0.822739, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.822739, -0.364829, 0.675000, 0.000000, 0.364829, 0.822739, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.880473, -0.186460, 1.237500, 0.000000, 0.186460, 0.880473, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.880473, 0.186460, 1.237500, 0.000000, -0.186460, 0.880473, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 18
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.863890, 0.252375, 0.675000, 0.000000, -0.252375, 0.863890, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.863890, -0.252375, 0.675000, 0.000000, 0.252375, 0.863890, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.890927, -0.127473, 1.237500, 0.000000, 0.127473, 0.890927, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.890927, 0.127473, 1.237500, 0.000000, -0.127473, 0.890927, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+
+#frame 19
+data modify storage ps:ani_data data[-1].frames append value {}
+data modify storage ps:ani_data data[-1].frames[-1].part_1 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 0.675000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_2 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.112500, 0.000000, 0.892475, 0.116137, 0.675000, 0.000000, -0.116137, 0.892475, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_3 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.112500, 0.000000, 0.892475, -0.116137, 0.675000, 0.000000, 0.116137, 0.892475, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_4 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.225000, 0.000000, 0.898117, -0.058190, 1.237500, 0.000000, 0.058190, 0.898117, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_5 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, -0.225000, 0.000000, 0.898117, 0.058190, 1.237500, 0.000000, -0.058190, 0.898117, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 0.900000, 0.000000, 1.350000, 0.000000, 0.000000, 0.900000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].tp_forward set value 1
+data modify storage ps:ani_data data[-1].frames[-1].is_last set value 1
+#data modify storage ps:ani_data data[-1].frames[-1].next set value {ani_id:1}

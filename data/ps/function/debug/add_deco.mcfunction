@@ -1,0 +1,1 @@
+summon interaction ~ ~ ~ {Tags:["ps_deco"],Passengers:[{id:"item_display"}]}

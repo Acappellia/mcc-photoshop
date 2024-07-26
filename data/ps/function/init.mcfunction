@@ -14,7 +14,7 @@ scoreboard objectives add ps_logout custom:leave_game
 scoreboard objectives add ps_jump custom:jump
 
 #init values
-execute unless data storage ps:ani available run data modify storage ps:ani available_list set value [1,2,3,4,5,6,7,8,9]
+execute unless data storage ps:ani available run data modify storage ps:ani available set value [1,2,3,4,5,6,7,8,9]
 function ps:inits/animate_data
 execute unless data storage ps:game unlocks run function ps:inits/unlocks
 execute unless data storage ps:game current_deco run data modify storage ps:game current_deco set value {deco_a:0,deco_b:0,deco_c:0,deco_d:0,bg:0,outfit:0}

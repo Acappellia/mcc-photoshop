@@ -1,24 +1,8 @@
-#assign obj_id
-execute store result score @s ps_obj_id store result score #assigned_obj_id ps run data get storage ps:ani available[0]
-data remove storage ps:ani available[0]
+#set obj_id
+scoreboard players operation @s ps_obj_id = #assigned_obj_id ps
 
-#assign uuid
-execute if score #assigned_obj_id ps matches 1 run data modify entity @s UUID set value [I;0,0,0,1]
-execute if score #assigned_obj_id ps matches 2 run data modify entity @s UUID set value [I;0,0,0,2]
-execute if score #assigned_obj_id ps matches 3 run data modify entity @s UUID set value [I;0,0,0,3]
-execute if score #assigned_obj_id ps matches 4 run data modify entity @s UUID set value [I;0,0,0,4]
-execute if score #assigned_obj_id ps matches 5 run data modify entity @s UUID set value [I;0,0,0,5]
-execute if score #assigned_obj_id ps matches 6 run data modify entity @s UUID set value [I;0,0,0,6]
-execute if score #assigned_obj_id ps matches 7 run data modify entity @s UUID set value [I;0,0,0,7]
-execute if score #assigned_obj_id ps matches 8 run data modify entity @s UUID set value [I;0,0,0,8]
-execute if score #assigned_obj_id ps matches 9 run data modify entity @s UUID set value [I;0,0,0,9]
-
-#set tag
-data modify entity @s Tags append from storage ps:tmp ani_data.ani_tag
-
-#set dimension
-data modify entity @s width set from storage ps:tmp ani_data.width
-data modify entity @s height set from storage ps:tmp ani_data.height
+#set interaction
+execute on passengers as @s[type=interaction] run function ps:animation/inits/set_interaction_data
 
 #set parts model
 data remove storage ps:tmp part_data

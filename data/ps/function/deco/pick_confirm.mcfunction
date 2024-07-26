@@ -1,6 +1,7 @@
 advancement revoke @s only ps:pick_confirm
 
 #check if locked
+scoreboard players reset #click_locked ps
 execute if data storage ps:tmp selecting_deco.locked run scoreboard players set #click_locked ps 1
 execute if score #click_locked ps matches 1 run function ps:deco/check_unlock
 execute if score #click_locked ps matches 1 run return -1

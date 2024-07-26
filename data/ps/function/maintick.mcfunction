@@ -9,3 +9,5 @@ execute as @a[scores={ps_logout=1..}] run function ps:player/reset_status
 execute if score #deco_picking ps matches 1 as @e[type=interaction,tag=deco_target] at @s run function ps:deco/tick
 
 execute as @a[tag=taking_shot] at @s run function ps:camera/tick
+
+scoreboard players reset @a ps_jump

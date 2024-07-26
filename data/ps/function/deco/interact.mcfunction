@@ -11,7 +11,7 @@ execute if entity @a[tag=taking_shot] run return -1
 
 #determine interaction target
 execute store result score #current_time ps run time query gametime
-execute as @e[distance=..5,type=interaction,tag=ps_demo] store result score @s ps_interact_time run data get entity @s interaction.timestamp
+execute as @e[distance=..5,type=interaction,tag=ps_deco] store result score @s ps_interact_time run data get entity @s interaction.timestamp
 execute as @e[distance=..5,type=interaction,tag=ps_deco] if score @s ps_interact_time = #current_time ps run tag @s add deco_target
 
 #execuegt
