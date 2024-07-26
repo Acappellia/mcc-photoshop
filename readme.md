@@ -9,7 +9,6 @@
 
 ## 动画机使用方式
 
-- 创建动画 `/function ps:animation/init {ani_id:<id>}`
-- 添加或修改动画 `/execute as <entity> run ps:animation/update {ani_id:<id>}`
-- 停止播放并清除实体 `/execute as <entity> run ps:animation/kill`
-- 停止播放并保留实体 `/execute as <entity> run ps:animation/drop`
+- 创建动画 `/function ps:animation/add {ani_id:<id>}`
+- 添加或修改动画 `/execute as <entity> run function ps:animation/update {ani_id:<id>}`
+- 停止播放并清除实体 `/execute as <entity> run function ps:animation/kill`

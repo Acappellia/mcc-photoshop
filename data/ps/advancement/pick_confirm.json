@@ -5,7 +5,7 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "custom_data": "{deco_pick:1}"
+                        "custom_data": "{ps_deco_sel:1}"
                     }
                 }
             }
