@@ -1,7 +1,7 @@
 data remove storage ps:ani_data data
 
 #init new animation type
-data modify storage ps:ani_data data append value {ani_tag:"pedestrian"}
+data modify storage ps:ani_data data append value {ani_tag:"pedestrian",height:1.6,width:0.8}
 #set init data
 data modify storage ps:ani_data data[-1].parts.part_1 set value {name:"body",init_pos:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],custom_model_data:1001,firework_color:114514}
 data modify storage ps:ani_data data[-1].parts.part_2 set value {name:"head",init_pos:[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],custom_model_data:1002,firework_color:114514}

@@ -2,7 +2,7 @@
 execute unless data storage ps:ani available[0] run return -1
 
 #summon
-summon marker ~ ~ ~ {Tags:["new_obj","ani"],Passengers:[\
+summon interaction ~ ~ ~ {Tags:["new_obj","ani"],Passengers:[\
 {id:"item_display",Tags:["part_1"]},\
 {id:"item_display",Tags:["part_2"]},\
 {id:"item_display",Tags:["part_3"]},\
@@ -16,8 +16,8 @@ summon marker ~ ~ ~ {Tags:["new_obj","ani"],Passengers:[\
 
 #assign id and set models
 $data modify storage ps:tmp ani_data set from storage ps:ani_data data[$(ani_id)]
-#$scoreboard players set @n[type=marker,tag=new_obj,distance=..1] ps_ani_id $(ani_id)
-execute as @n[type=marker,tag=new_obj,distance=..1] run function ps:animation/inits/assign_uuid
+#$scoreboard players set @n[type=interaction,tag=new_obj,distance=..1] ps_ani_id $(ani_id)
+execute as @n[type=interaction,tag=new_obj,distance=..1] run function ps:animation/inits/assign_uuid
 
 #add frames
 execute store result storage ps:tmp frame_info.frame int 1 run scoreboard players set #frame_count ps 1

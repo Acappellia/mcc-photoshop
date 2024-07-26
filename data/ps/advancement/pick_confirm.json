@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "rclk": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "custom_data": "{deco_pick:1}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "ps:deco/pick_confirm"
+    }
+}

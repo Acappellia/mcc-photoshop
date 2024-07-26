@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "inv_change": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "player": {
+                    "nbt": "{Tags:[\"deco_user\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "ps:deco/player_inv/check_type"
+    }
+}

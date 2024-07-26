@@ -16,6 +16,10 @@ execute if score #assigned_obj_id ps matches 9 run data modify entity @s UUID se
 #set tag
 data modify entity @s Tags append from storage ps:tmp ani_data.ani_tag
 
+#set dimension
+data modify entity @s width set from storage ps:tmp ani_data.width
+data modify entity @s height set from storage ps:tmp ani_data.height
+
 #set parts model
 data remove storage ps:tmp part_data
 data modify storage ps:tmp part_data set from storage ps:tmp ani_data.parts.part_1
