@@ -50,6 +50,12 @@ function ps:inits/11_pose
 function ps:inits/12_pose
 function ps:inits/13_pose
 function ps:inits/14_pose
+function ps:inits/15_pose
+function ps:inits/16_pose
+function ps:inits/17_pose
+function ps:inits/18_pose
+function ps:inits/19_pose
+function ps:inits/20_pose
 
 forceload add 0 0 0 0
 

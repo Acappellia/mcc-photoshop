@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "interact_deco": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"ps_ding\"]}"
+                },
+                "player": {
+                    "equipment": {
+                        "mainhand": {
+                            "items": "paper",
+                            "predicates": {
+                                "custom_data": "{ps_photopaper:2}"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "ps:wash/interact_ding"
+    }
+}

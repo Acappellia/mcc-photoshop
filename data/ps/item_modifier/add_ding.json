@@ -1,0 +1,15 @@
+[
+    {
+        "function": "set_custom_data",
+        "tag": "{ps_photopaper:2}"
+    },
+    {
+        "function": "set_components",
+        "components": {
+            "item_name": "\"正在处理的相纸\"",
+            "lore": [
+                "[{\"text\":\"放进定影液里浸泡，保存图案\",\"color\":\"gray\"}]"
+            ]
+        }
+    }
+]

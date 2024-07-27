@@ -1,0 +1,30 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1.0,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "paper",
+                    "functions": [
+                        {
+                            "function": "set_custom_data",
+                            "tag": "{ps_photopaper:0}"
+                        },
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "item_name": "\"空白相纸\"",
+                                "lore": [
+                                    "[{\"text\":\"在放大机里曝光，转移底片上的图案\",\"color\":\"gray\"}]"
+                                ],
+                                "max_stack_size": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
