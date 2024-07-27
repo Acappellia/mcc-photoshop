@@ -2,6 +2,8 @@ effect give @a saturation infinite 0 true
 effect give @a resistance infinite 9 true
 gamemode adventure @a[gamemode=survival]
 
+execute as @a store result score @s ps_selecting_slot run data get entity @s SelectedItemSlot
+
 execute as @a unless score @s ps_player_id matches 0.. store result score @s ps_player_id run scoreboard players add #ps_player_id ps 1
 
 execute if data storage ps:ani frame_list[0] run function ps:animation/tick
@@ -14,4 +16,5 @@ execute as @a[tag=taking_shot] at @s run function ps:camera/tick
 
 execute as @a run function ps:photo/tick
 
+execute as @a run scoreboard players operation @s ps_last_selecting_slot = @s ps_selecting_slot
 scoreboard players reset @a ps_jump

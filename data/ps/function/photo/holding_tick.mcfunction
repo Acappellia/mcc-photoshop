@@ -1,5 +1,9 @@
 tag @s add photo_holder
 
+execute store result score @s ps_holding_photo_id run data get entity @s SelectedItem.components."minecraft:custom_data".photo_id
+execute unless score @s ps_last_holding_photo_id = @s ps_holding_photo_id run function ps:photo/reset
+scoreboard players operation @s ps_last_holding_photo_id = @s ps_holding_photo_id
+
 execute at @s if score @s ps_holding_photo matches 0.. run function ps:photo/summon
 scoreboard players set @s ps_holding_photo -2
 

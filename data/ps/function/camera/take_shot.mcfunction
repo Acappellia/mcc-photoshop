@@ -11,6 +11,7 @@ setblock 0 -64 0 white_shulker_box{Items:[{id:"paper",count:1,Slot:0b,components
 #data modify block 0 -64 0 Items[{Slot:0b}].components."minecraft:custom_data".deco merge from storage ps:game current_deco
 #execute if score #customer_is_taking ps matches 1 run data modify block 0 -64 0 Items[{Slot:0b}].components."minecraft:custom_data".customer merge from storage ps:game current_customer
 data modify block 0 -64 0 Items[{Slot:0b}].components."minecraft:custom_data".photo_data set from storage ps:tmp photo_data
+execute store result block 0 -64 0 Items[{Slot:0b}].components."minecraft:custom_data".photo_id int 1 run scoreboard players add #photo_id ps 1
 loot spawn ~ ~ ~ mine 0 -64 0
 setblock 0 -64 0 bedrock
 
