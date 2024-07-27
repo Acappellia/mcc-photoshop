@@ -14,5 +14,6 @@ scoreboard players remove #waiting_c_lines ps 1
 execute unless score #waiting_c_lines ps matches 0 as @e[type=interaction,distance=..10,tag=waiting_c] on vehicle run return 1
 
 scoreboard players set #game_status ps 4
+scoreboard players set #npc_max_shots ps 5
 execute as @a[tag=f2] run function ps:player/show_blackscreen
 schedule function ps:gameplay/waiting_d_tp 20t replace
