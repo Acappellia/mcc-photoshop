@@ -1,4 +1,4 @@
-execute if score #game_status ps matches 4 as @e[type=interaction,distance=..10,tag=waiting_d] on vehicle run return run function ps:animation/update {ani_id:7}
+execute if score #game_status ps matches 4 as @e[type=interaction,distance=..10,tag=waiting_d] on vehicle run function ps:gameplay/random_pose
 
 tag @s add taking_shot
 
