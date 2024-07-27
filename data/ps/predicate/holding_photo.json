@@ -1,0 +1,14 @@
+{
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": "paper",
+                "predicates": {
+                    "custom_data": "{ps_photo:1}"
+                }
+            }
+        }
+    }
+}

@@ -13,8 +13,9 @@ item replace block 0 -64 0 container.10 from entity @s armor.head
 item replace block 0 -64 0 container.11 from entity @s armor.chest
 item replace block 0 -64 0 container.12 from entity @s armor.legs
 item replace block 0 -64 0 container.13 from entity @s armor.feet
-data modify storage ps:player_storage boxes prepend value []
-data modify storage ps:player_storage boxes[0] set from block 0 -64 0 Items
+data modify storage ps:player_storage boxes prepend value {}
+execute store result storage ps:player_storage boxes[0].ps_player_id int 1 run scoreboard players get @s ps_player_id
+data modify storage ps:player_storage boxes[0].Items set from block 0 -64 0 Items
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 white_shulker_box
 item replace block 0 -64 0 container.0 from entity @s inventory.0
@@ -44,7 +45,8 @@ item replace block 0 -64 0 container.23 from entity @s inventory.23
 item replace block 0 -64 0 container.24 from entity @s inventory.24
 item replace block 0 -64 0 container.25 from entity @s inventory.25
 item replace block 0 -64 0 container.26 from entity @s inventory.26
-data modify storage ps:player_storage boxes prepend value []
-data modify storage ps:player_storage boxes[0] set from block 0 -64 0 Items
+data modify storage ps:player_storage boxes prepend value {}
+execute store result storage ps:player_storage boxes[0].ps_player_id int 1 run scoreboard players get @s ps_player_id
+data modify storage ps:player_storage boxes[0].Items set from block 0 -64 0 Items
 setblock 0 -64 0 bedrock
 clear @s
