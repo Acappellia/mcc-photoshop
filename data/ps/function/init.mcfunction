@@ -43,6 +43,10 @@ function ps:inits/4_go_upstairs
 function ps:inits/5_waiting_c
 function ps:inits/6_waiting_d
 function ps:inits/7_pose
+function ps:inits/8_pose
+function ps:inits/9_pose
+function ps:inits/10_pose
+function ps:inits/11_pose
 
 forceload add 0 0 0 0
 
