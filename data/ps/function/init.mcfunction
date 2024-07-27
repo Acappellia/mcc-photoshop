@@ -47,5 +47,10 @@ function ps:inits/7_pose
 forceload add 0 0 0 0
 
 #init slow tick
-
 schedule function ps:slowtick 20t append
+
+#init team
+team add players
+team modify players color gray
+team modify players collisionRule never
+team modify players seeFriendlyInvisibles true

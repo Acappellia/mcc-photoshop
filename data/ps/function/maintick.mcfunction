@@ -1,6 +1,7 @@
 effect give @a saturation infinite 0 true
 effect give @a resistance infinite 9 true
 gamemode adventure @a[gamemode=survival]
+team join players @a
 
 execute as @a store result score @s ps_selecting_slot run data get entity @s SelectedItemSlot
 
