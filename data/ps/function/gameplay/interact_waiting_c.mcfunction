@@ -13,6 +13,7 @@ scoreboard players remove #waiting_c_lines ps 1
 
 execute unless score #waiting_c_lines ps matches 0 as @e[type=interaction,distance=..10,tag=waiting_c] on vehicle run return 1
 
-execute as @e[type=interaction,distance=..10,tag=waiting_c] on vehicle run return run function ps:animation/update {ani_id:6}
+execute as @e[type=interaction,distance=..10,tag=waiting_c] on vehicle run function ps:animation/update {ani_id:6}
 scoreboard players set #game_status ps 4
 execute as @a[tag=f2] run function ps:player/show_blackscreen
+schedule function ps:gameplay/waiting_d_tp 22t replace

@@ -2,7 +2,7 @@ execute as @e[type=interaction,distance=..10,tag=waiting_d] on vehicle run retur
 
 tag @s add taking_shot
 
-tp @s ~ ~1 ~
+tp @s 153 -33 789 -90 15
 
 effect give @s slowness infinite 9 true
 
