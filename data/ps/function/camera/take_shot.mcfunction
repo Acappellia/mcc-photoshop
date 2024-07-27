@@ -1,6 +1,6 @@
 data remove storage ps:tmp photo_data
 
-execute as @e[type=text_display,tag=customer,tag=pose,distance=..50] run function ps:camera/copy_display/customer
+execute as @e[type=interaction,tag=pose,distance=..50] on vehicle run function ps:camera/copy_display/customer
 execute as @e[type=interaction,tag=deco_1,distance=..50] on passengers as @s[type=item_display] run function ps:camera/copy_display/deco_1
 execute as @e[type=interaction,tag=deco_2,distance=..50] on passengers as @s[type=item_display] run function ps:camera/copy_display/deco_2
 execute as @e[type=interaction,tag=deco_3,distance=..50] on passengers as @s[type=item_display] run function ps:camera/copy_display/deco_3
@@ -16,5 +16,10 @@ loot spawn ~ ~ ~ mine 0 -64 0
 setblock 0 -64 0 bedrock
 
 particle flash ~ ~ ~ 0 0 0 0 20
-kill @e[type=item_display,tag=photo_blackbox,distance=..10]
+#kill @e[type=item_display,tag=photo_blackbox,distance=..10]
 function ps:camera/restore
+
+execute unless score #game_status ps matches 4 run return 1
+execute as @e[type=interaction,distance=..10,tag=pose] on vehicle run return run function ps:animation/update {ani_id:6}
+execute as @a[tag=f2] run function ps:player/show_blackscreen
+scoreboard players set #game_status ps 5

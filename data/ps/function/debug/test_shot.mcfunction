@@ -1,6 +1,6 @@
 data remove storage ps:tmp photo_data
 
-execute as @e[type=text_display,tag=enter_0,distance=..50] run function ps:camera/copy_display/customer
+execute as @e[type=interaction,tag=enter,distance=..50] on vehicle run function ps:camera/copy_display/customer
 execute as @e[type=interaction,tag=deco_1,distance=..50] on passengers as @s[type=item_display] run function ps:camera/copy_display/deco_1
 execute as @e[type=interaction,tag=deco_2,distance=..50] on passengers as @s[type=item_display] run function ps:camera/copy_display/deco_2
 execute as @e[type=interaction,tag=deco_3,distance=..50] on passengers as @s[type=item_display] run function ps:camera/copy_display/deco_3

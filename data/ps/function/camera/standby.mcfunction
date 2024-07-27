@@ -1,3 +1,5 @@
+execute as @e[type=interaction,distance=..10,tag=waiting_d] on vehicle run return run function ps:animation/update {ani_id:7}
+
 tag @s add taking_shot
 
 tp @s ~ ~1 ~

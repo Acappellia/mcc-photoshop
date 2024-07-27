@@ -2,8 +2,7 @@
 $data modify storage ps:tmp ani_data set from storage ps:ani_data data[$(ani_id)]
 #$scoreboard players set @s ps_ani_id $(ani_id)
 
-#set tag
-data modify entity @s Tags append from storage ps:tmp ani_data.ani_tag
+execute on passengers as @s[type=interaction] run function ps:animation/inits/set_interaction_data
 
 #add frames
 execute store result storage ps:tmp frame_info.frame int 1 run scoreboard players set #frame_count ps 1
