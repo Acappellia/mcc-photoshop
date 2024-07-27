@@ -15,7 +15,7 @@ execute store result storage ps:tmp photo_data[0].transformation[8] double 1 run
 execute store result storage ps:tmp photo_data[0].transformation[9] double 1 run data get storage ps:tmp customer_ani_part.transformation[9] 10000
 execute store result storage ps:tmp photo_data[0].transformation[10] double 1 run data get storage ps:tmp customer_ani_part.transformation[10] 10000
 execute store result storage ps:tmp photo_data[0].transformation[11] double 1 run data get storage ps:tmp customer_ani_part.transformation[11] 10000
-execute store result storage ps:tmp photo_data[0].transformation[15] double 1 run data get storage ps:tmp customer_ani_part.transformation[15] 6000000
+execute store result storage ps:tmp photo_data[0].transformation[15] double 1 run data get storage ps:tmp customer_ani_part.transformation[15] 10000000
 
-tellraw @a ["origin: ",{"nbt": "customer_ani_part.transformation","storage": "ps:tmp"}]
-tellraw @a ["out: ",{"nbt": "photo_data[0].transformation","storage": "ps:tmp"}]
+#tellraw @a ["origin: ",{"nbt": "customer_ani_part.transformation","storage": "ps:tmp"}]
+#tellraw @a ["out: ",{"nbt": "photo_data[0].transformation","storage": "ps:tmp"}]

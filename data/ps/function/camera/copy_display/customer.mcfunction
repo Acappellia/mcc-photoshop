@@ -9,7 +9,7 @@ execute if data storage ps:tmp customer_ani_frame.part_2 on passengers as @s[tag
 data modify storage ps:tmp customer_ani_part set from storage ps:tmp customer_ani_frame.part_3
 execute if data storage ps:tmp customer_ani_frame.part_3 on passengers as @s[tag=part_3] run function ps:camera/copy_display/customer_part
 data modify storage ps:tmp customer_ani_part set from storage ps:tmp customer_ani_frame.part_4
-tellraw @a "showing part 4"
+#tellraw @a "showing part 4"
 execute if data storage ps:tmp customer_ani_frame.part_4 on passengers as @s[tag=part_4] run function ps:camera/copy_display/customer_part
 data modify storage ps:tmp customer_ani_part set from storage ps:tmp customer_ani_frame.part_5
 execute if data storage ps:tmp customer_ani_frame.part_5 on passengers as @s[tag=part_5] run function ps:camera/copy_display/customer_part

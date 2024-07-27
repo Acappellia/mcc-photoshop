@@ -11,6 +11,7 @@ execute unless score #money ps matches 0.. run scoreboard players set #money ps 
 scoreboard objectives add ps_obj_id dummy
 scoreboard objectives add ps_ani_id dummy
 scoreboard objectives add ps_interact_time dummy
+scoreboard objectives add ps_wallphoto_id dummy
 
 #init player scoreboards
 scoreboard objectives add ps_player_id dummy
