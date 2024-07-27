@@ -18,4 +18,4 @@ execute as @e[distance=..5,type=interaction,tag=ps_deco] if score @s ps_interact
 
 #execuegt
 tag @s add deco_user
-execute as @n[distance=..5,type=interaction,tag=deco_target,tag=ps_deco,limit=1] at @s positioned ~ ~0.1 ~ run function ps:deco/enter_deco
+execute as @n[distance=..5,type=interaction,tag=deco_target,tag=ps_deco,limit=1] at @s run function ps:deco/enter_deco

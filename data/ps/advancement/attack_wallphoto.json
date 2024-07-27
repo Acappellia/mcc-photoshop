@@ -1,7 +1,7 @@
 {
     "criteria": {
         "interact_deco": {
-            "trigger": "player_interacted_with_entity",
+            "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
                     "type": "interaction",
