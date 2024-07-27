@@ -1,0 +1,10 @@
+[
+    {
+        "function": "set_custom_data",
+        "tag": "{ps_photopaper:1}"
+    },
+    {
+        "function": "copy_custom_data",
+        
+    }
+]

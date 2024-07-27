@@ -7,7 +7,7 @@ execute as @e[type=interaction,tag=deco_3,distance=..50] on passengers as @s[typ
 execute as @e[type=interaction,tag=deco_4,distance=..50] on passengers as @s[type=item_display] run function ps:camera/copy_display/deco_4
 execute as @e[type=interaction,tag=bg,distance=..50] on passengers as @s[type=item_display] run function ps:camera/copy_display/bg
 
-setblock 0 -64 0 white_shulker_box{Items:[{id:"paper",count:1,Slot:0b,components:{item_name:'"底片"',lore:['[{"text":"需要去暗房里冲洗成照片","color":"gray"}]'],custom_model_data:1001,custom_data:{ps_film:1}}}]}
+setblock 0 -64 0 white_shulker_box{Items:[{id:"paper",count:1,Slot:0b,components:{item_name:'"底片"',lore:['[{"text":"需要去暗房里冲洗成照片","color":"gray"}]'],max_stack_size:1,custom_model_data:1001,custom_data:{ps_film:1}}}]}
 #data modify block 0 -64 0 Items[{Slot:0b}].components."minecraft:custom_data".deco merge from storage ps:game current_deco
 #execute if score #customer_is_taking ps matches 1 run data modify block 0 -64 0 Items[{Slot:0b}].components."minecraft:custom_data".customer merge from storage ps:game current_customer
 data modify block 0 -64 0 Items[{Slot:0b}].components."minecraft:custom_data".photo_data set from storage ps:tmp photo_data
