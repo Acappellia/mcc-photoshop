@@ -5,9 +5,9 @@ scoreboard players set @s ps_click_cd -5
 
 execute unless score #game_status ps matches 3 run return -1
 
-execute if score #waiting_c_lines ps matches 3 run tellraw @a "xxx: 好久不见！！"
-execute if score #waiting_c_lines ps matches 2 run tellraw @a "xxx: 我要拍个照片！"
-execute if score #waiting_c_lines ps matches 1 run tellraw @a "xxx: 麻烦您了！"
+execute if score #waiting_c_lines ps matches 3 run tellraw @a "xxx: 你的相机好多！"
+execute if score #waiting_c_lines ps matches 2 run tellraw @a "xxx: 一定要花很多钱吧！"
+execute if score #waiting_c_lines ps matches 1 run tellraw @a "xxx: 我去准备拍照了！"
 
 scoreboard players remove #waiting_c_lines ps 1
 
