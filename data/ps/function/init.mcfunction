@@ -48,6 +48,7 @@ function ps:inits/9_pose
 function ps:inits/10_pose
 function ps:inits/11_pose
 function ps:inits/12_pose
+function ps:inits/13_pose
 
 forceload add 0 0 0 0
 
