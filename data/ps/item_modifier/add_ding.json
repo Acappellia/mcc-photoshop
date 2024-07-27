@@ -6,7 +6,8 @@
     {
         "function": "set_components",
         "components": {
-            "item_name": "\"相片\""
+            "item_name": "\"相片\"",
+            "custom_model_data": 4
         }
     },
     {

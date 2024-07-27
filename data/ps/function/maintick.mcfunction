@@ -3,6 +3,8 @@ effect give @a resistance infinite 9 true
 gamemode adventure @a[gamemode=survival]
 team join players @a
 
+title @a actionbar [{"text": "\uea01 ","color": "white"},{"score": {"name": "#money","objective": "ps"},"color": "yellow"}]
+
 execute as @a store result score @s ps_selecting_slot run data get entity @s SelectedItemSlot
 
 execute as @a unless score @s ps_player_id matches 0.. store result score @s ps_player_id run scoreboard players add #ps_player_id ps 1

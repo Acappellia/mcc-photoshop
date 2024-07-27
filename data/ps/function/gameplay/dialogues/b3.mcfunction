@@ -1,0 +1,6 @@
+execute unless score #waiting_b_lines ps matches 0.. run scoreboard players set #waiting_b_lines ps 4
+
+execute if score #waiting_b_lines ps matches 4 run tellraw @a [{"text":"<","color": "white"},{"nbt": "gameplay.npc_name","storage": "ps:game","color": "aqua"},{"text":"> ","color": "white"},{"text":"上次来还是好久之前了，没想现在装修的这么好了","color": "white"}]
+execute if score #waiting_b_lines ps matches 3 run tellraw @a [{"text":"<","color": "white"},{"nbt": "gameplay.npc_name","storage": "ps:game","color": "aqua"},{"text":"> ","color": "white"},{"text":"再帮我拍一套照片吧，挑张好看的，我要拿来当纪念照","color": "white"}]
+execute if score #waiting_b_lines ps matches 2 run tellraw @a [{"text":"<","color": "white"},{"nbt": "gameplay.npc_name","storage": "ps:game","color": "aqua"},{"text":"> ","color": "white"},{"text":"拍法还是和之前一样吗？","color": "white"}]
+execute if score #waiting_b_lines ps matches 1 run tellraw @a [{"text":"<","color": "white"},{"nbt": "gameplay.npc_name","storage": "ps:game","color": "aqua"},{"text":"> ","color": "white"},{"text":"那就行，我先上楼去看看","color": "white"}]

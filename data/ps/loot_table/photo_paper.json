@@ -19,7 +19,8 @@
                                 "lore": [
                                     "[{\"text\":\"在放大机里曝光，转移底片上的图案\",\"color\":\"gray\"}]"
                                 ],
-                                "max_stack_size": 1
+                                "max_stack_size": 1,
+                                "custom_model_data": 2
                             }
                         }
                     ]

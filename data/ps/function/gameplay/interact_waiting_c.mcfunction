@@ -5,9 +5,21 @@ scoreboard players set @s ps_click_cd -5
 
 execute unless score #game_status ps matches 3 run return -1
 
-execute if score #waiting_c_lines ps matches 3 run tellraw @a "xxx: 你的相机好多！"
-execute if score #waiting_c_lines ps matches 2 run tellraw @a "xxx: 一定要花很多钱吧！"
-execute if score #waiting_c_lines ps matches 1 run tellraw @a "xxx: 我去准备拍照了！"
+execute unless score #random_waiting_c ps matches 1.. store result score #random_waiting_c ps run random value 1..9
+
+scoreboard players reset #required_bg ps
+scoreboard players reset #required_deco ps
+
+playsound entity.cat.ambient player @a ~ ~ ~ 1 2
+execute if score #random_waiting_c ps matches 1 run function ps:gameplay/dialogues/c1
+execute if score #random_waiting_c ps matches 2 run function ps:gameplay/dialogues/c2
+execute if score #random_waiting_c ps matches 3 run function ps:gameplay/dialogues/c3
+execute if score #random_waiting_c ps matches 4 run function ps:gameplay/dialogues/c4
+execute if score #random_waiting_c ps matches 5 run function ps:gameplay/dialogues/c5
+execute if score #random_waiting_c ps matches 6 run function ps:gameplay/dialogues/c6
+execute if score #random_waiting_c ps matches 7 run function ps:gameplay/dialogues/c7
+execute if score #random_waiting_c ps matches 8 run function ps:gameplay/dialogues/c8
+execute if score #random_waiting_c ps matches 9 run function ps:gameplay/dialogues/c9
 
 scoreboard players remove #waiting_c_lines ps 1
 
