@@ -2,6 +2,7 @@
 scoreboard objectives add ps dummy
 execute unless score #ps_player_id ps matches -2147483648..2147483647 run scoreboard players set #ps_player_id ps -1
 execute unless score #photo_id ps matches -2147483648..2147483647 run scoreboard players set #photo_id ps -1
+execute unless score #wall_photo_id ps matches -2147483648..2147483647 run scoreboard players set #wall_photo_id ps -1
 
 #init some global values
 execute unless score #money ps matches 0.. run scoreboard players set #money ps 0

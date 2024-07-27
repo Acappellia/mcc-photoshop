@@ -6,7 +6,12 @@
             "type": "player",
             "looking_at": {
                 "type": "interaction",
-                "nbt": "{Tags:[\"ps_photowall\"]}"
+                "nbt": "{Tags:[\"ps_photowall\"]}",
+                "distance": {
+                    "absolute": {
+                        "max": 3
+                    }
+                }
             }
         }
     }
