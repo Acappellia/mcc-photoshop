@@ -13,4 +13,7 @@ execute if data storage ps:tmp frame_data.part_7 on passengers as @s[tag=part_7]
 execute if data storage ps:tmp frame_data.part_8 on passengers as @s[tag=part_8] run data modify entity @s {} merge from storage ps:tmp frame_data.part_8
 execute if data storage ps:tmp frame_data.part_9 on passengers as @s[tag=part_9] run data modify entity @s {} merge from storage ps:tmp frame_data.part_9
 
+execute if data storage ps:tmp frame_data.sound at @s run function ps:animation/ticks/sound with storage ps:tmp frame_data.sound
+execute if data storage ps:tmp frame_data.particle at @s run function ps:animation/ticks/particle with storage ps:tmp frame_data.particle
+
 execute if data storage ps:tmp frame_data.is_last run function ps:animation/ticks/end

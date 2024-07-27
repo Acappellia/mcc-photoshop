@@ -21,6 +21,9 @@ data modify storage ps:ani_data data[-1].frames[-1].part_6 set value {interpolat
 data modify storage ps:ani_data data[-1].frames[-1].part_7 set value {interpolation_duration:1,start_interpolation:0,transformation:[-0.867694, 0.000000, -0.238971, 9.536956, 0.000000, 0.900000, -0.000000, 1.350816, 0.238971, -0.000000, -0.867694, -6.834915, 0.000000, 0.000000, 0.000000, 1.000000]}
 data modify storage ps:ani_data data[-1].frames[-1].part_8 set value {interpolation_duration:1,start_interpolation:0,transformation:[-0.867694, 0.000000, -0.238971, 9.540300, 0.000000, 0.900000, -0.000000, 1.350000, 0.238971, -0.000000, -0.867694, -6.835836, 0.000000, 0.000000, 0.000000, 1.000000]}
 data modify storage ps:ani_data data[-1].frames[-1].part_9 set value {interpolation_duration:1,start_interpolation:0,transformation:[-0.867694, 0.000000, -0.238971, 9.540300, 0.000000, 0.900000, -0.000000, 1.350000, 0.238971, -0.000000, -0.867694, -6.835836, 0.000000, 0.000000, 0.000000, 1.000000]}
+data modify storage ps:ani_data data[-1].frames[-1].sound set value {type:"minecraft:block.stone.step",pos_left:0.0,pos_up:0.0,pos_front:0.0}
+data modify storage ps:ani_data data[-1].frames[-1].particle set value {type:"minecraft:crit",pos_left:0.0,pos_up:0.0,pos_front:0.0}
+
 
 #frame 1
 data modify storage ps:ani_data data[-1].frames append value {}
