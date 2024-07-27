@@ -31,6 +31,12 @@ execute unless data storage ps:game current_customer run data modify storage ps:
 
 #init animate data
 data remove storage ps:ani_data data
-function ps:inits/animate_data
+function ps:inits/0_enter
+function ps:inits/1_waiting_a
+function ps:inits/2_nod
+function ps:inits/3_waiting_b
+function ps:inits/4_go_upstairs
+function ps:inits/5_waiting_c
+function ps:inits/6_waiting_d
 
 forceload add 0 0 0 0
