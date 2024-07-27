@@ -15,12 +15,11 @@ execute store result block 0 -64 0 Items[{Slot:0b}].components."minecraft:custom
 loot spawn ~ ~ ~ mine 0 -64 0
 setblock 0 -64 0 bedrock
 
-particle flash ~ ~ ~ 0 0 0 0 20
+particle flash ~ ~1 ~ 0 0 0 0 10
 #kill @e[type=item_display,tag=photo_blackbox,distance=..10]
 function ps:camera/restore
 
 execute unless score #game_status ps matches 4 run return 1
-execute as @e[type=interaction,distance=..10,tag=pose] on vehicle run function ps:animation/update {ani_id:6}
 execute as @a[tag=f2] run function ps:player/show_blackscreen
 scoreboard players set #game_status ps 5
-schedule function ps:gameplay/afterpose_tp 22t replace
+schedule function ps:gameplay/afterpose_tp 20t replace
