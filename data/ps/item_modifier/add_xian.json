@@ -1,15 +1,14 @@
 [
     {
         "function": "set_custom_data",
-        "tag": "{ps_photopaper:10,ps_photo:1}"
+        "tag": "{ps_photopaper:2}"
     },
     {
         "function": "set_components",
         "components": {
-            "item_name": "\"相片\"",
+            "item_name": "\"正在处理的相纸\"",
             "lore": [
-                "[{\"text\":\"摄影：\",\"color\":\"gray\"},{\"selector\":\"@s\",\"color\":\"gray\"}]",
-                "[{\"text\":\"【红沙发照相馆】\",\"color\":\"dark_gray\"}]"
+                "[{\"text\":\"放进定影液里浸泡，保存图案\",\"color\":\"gray\"}]"
             ]
         }
     }

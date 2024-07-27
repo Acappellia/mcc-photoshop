@@ -5,5 +5,6 @@ execute on passengers run data modify block 0 -64 0 Items[{Slot:0b}].components 
 loot spawn ~ ~ ~ mine 0 -64 0
 setblock 0 -64 0 bedrock
 
+execute on passengers run data remove entity @s item 
 tag @s remove have_film
 execute as @e[type=item_display,tag=magnifier_display,distance=..10] run data modify entity @s item.components.minecraft:custom_model_data set value 45
