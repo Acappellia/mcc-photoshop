@@ -10,4 +10,5 @@ execute as @e[type=item_display,distance=..5,tag=ps_photo] if score @s ps_player
 execute as @e[type=item_display,distance=..5,tag=ps_photo] if score @s ps_player_id = @p[distance=..5,tag=photo_holder] ps_player_id run scoreboard players reset @s ps_player_id
 tag @s remove photo_holder
 
+playsound entity.item_frame.add_item block @a ~ ~ ~ 1 1.2
 item modify entity @s weapon.mainhand ps:remove_1

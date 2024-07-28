@@ -5,5 +5,6 @@ execute as @e[type=item_display,distance=..1,tag=ps_photo_base] if score @s ps_w
 loot spawn ~0.2 ~ ~ mine 0 -64 0
 setblock 0 -64 0 bedrock
 
+playsound entity.item_frame.remove_item block @a ~ ~ ~ 1 1.2
 execute as @e[type=item_display,distance=..1,tag=ps_photo] if score @s ps_wallphoto_id = #wallphoto_id ps run kill @s
 kill @s
