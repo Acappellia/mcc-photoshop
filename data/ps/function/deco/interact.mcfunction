@@ -5,6 +5,8 @@ execute if entity @s[tag=deco_user] run scoreboard players set #player_confirm_c
 execute if score #player_confirm_click ps matches 1 run function ps:deco/pick_confirm
 execute if score #player_confirm_click ps matches 1 run return -1
 
+playsound item.armor.equip_leather player @a ~ ~ ~ 1 0.8
+
 execute if score #deco_picking ps matches 1 run tellraw @s [{"selector": "@a[tag=deco_user]"},{"text": "已经在布置影棚了..."}]
 execute if score #deco_picking ps matches 1 run return -1
 
@@ -19,3 +21,5 @@ execute as @e[distance=..5,type=interaction,tag=ps_deco] if score @s ps_interact
 #execuegt
 tag @s add deco_user
 execute as @n[distance=..5,type=interaction,tag=deco_target,tag=ps_deco,limit=1] at @s run function ps:deco/enter_deco
+
+tellraw @a "interact"

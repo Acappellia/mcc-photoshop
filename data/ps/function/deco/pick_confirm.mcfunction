@@ -3,6 +3,8 @@ advancement revoke @s only ps:pick_confirm
 execute unless score @s ps_click_cd matches 0.. run return -1
 scoreboard players set @s ps_click_cd -5
 
+playsound item.armor.equip_leather player @a ~ ~ ~ 1 0.8
+
 #check if locked
 scoreboard players reset #click_locked ps
 execute if data storage ps:tmp selecting_deco.locked run scoreboard players set #click_locked ps 1

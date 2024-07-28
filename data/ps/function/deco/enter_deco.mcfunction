@@ -8,3 +8,5 @@ execute if entity @s[tag=bg] run scoreboard players set #deco_picktype ps 1
 execute if entity @s[tag=outfit] run scoreboard players set #deco_picktype ps 2
 
 execute as @p[tag=deco_user,distance=..10] run function ps:deco/enter_deco_player
+
+tellraw @a "enter_deco"
