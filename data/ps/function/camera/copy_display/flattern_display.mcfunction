@@ -1,1 +1,0 @@
-data modify storage ps:tmp photo_data[0].transformation.scale set value [0.5,0.5,0.005]
