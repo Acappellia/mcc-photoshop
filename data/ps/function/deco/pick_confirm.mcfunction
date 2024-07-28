@@ -16,6 +16,6 @@ execute unless data storage ps:tmp selecting_deco run return -1
 
 #execute if score #deco_picktype ps matches 2 as @e[type=interaction,tag=customer,distance=..50] run function ps:customer/change_outfit
 function ps:deco/player_restore
-execute as @e[type=interaction,distance=..10,tag=deco_target] run function ps:deco/deco_confirm
+execute as @e[type=interaction,distance=..20,tag=deco_target] run function ps:deco/deco_confirm
 
 scoreboard players reset #deco_picking ps
