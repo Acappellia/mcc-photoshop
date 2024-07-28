@@ -21,5 +21,7 @@ execute as @a run function ps:photo/tick
 
 execute as @a run function ps:player/check_place
 
+execute as @a run function ps:player/bgm
+
 execute as @a run scoreboard players operation @s ps_last_selecting_slot = @s ps_selecting_slot
 scoreboard players reset @a ps_jump

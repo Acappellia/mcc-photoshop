@@ -28,6 +28,7 @@ scoreboard objectives add ps_last_selecting_slot dummy
 scoreboard objectives add ps_holding_photo_id dummy
 scoreboard objectives add ps_last_holding_photo_id dummy
 scoreboard objectives add ps_tp_cd dummy
+scoreboard objectives add ps_music_cd custom:time_since_death
 
 #init values
 execute unless data storage ps:ani available run data modify storage ps:ani available set value [1,2,3,4,5,6,7,8,9]

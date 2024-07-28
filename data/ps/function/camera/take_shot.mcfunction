@@ -18,7 +18,8 @@ execute if score #game_status ps matches 4 run data modify block 0 -64 0 Items[{
 loot spawn ~ ~ ~ mine 0 -64 0
 setblock 0 -64 0 bedrock
 
-particle flash ~ ~1 ~ 0 0 0 0 5
+execute at @e[type=interaction,tag=ps_camera] run particle flash ~ ~1.8 ~ 0 0 0 0 5
+playsound ps:camera player @a ~ ~ ~ 1 1
 #kill @e[type=item_display,tag=photo_blackbox,distance=..10]
 
 execute if score #game_status ps matches 4 run scoreboard players remove #npc_max_shots ps 1
