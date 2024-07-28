@@ -1,2 +1,2 @@
-execute if score @s ps_music_cd matches 0.. run playsound psbgm music @s ~ ~ ~ 1 1
-execute if score @s ps_music_cd matches 0.. run scoreboard players remove @s ps_music_cd 8000
+execute if score @s ps_music_cd matches 0.. run playsound psbgm record @s ~ ~ ~ 1 1
+execute if score @s ps_music_cd matches 0.. run scoreboard players remove @s ps_music_cd 7200

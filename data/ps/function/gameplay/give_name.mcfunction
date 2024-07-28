@@ -1,0 +1,1 @@
+$data modify storage ps:game gameplay.npc_name set from storage ps:game gameplay.npc_name_list[$(id)]
