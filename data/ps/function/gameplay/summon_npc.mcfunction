@@ -7,4 +7,7 @@ execute if score #random ps matches 1 positioned 149 -43 788 run function ps:ani
 execute if score #random ps matches 2 positioned 149 -43 788 run function ps:animation/add {ani_id:27}
 execute if score #random ps matches 3 positioned 149 -43 788 run function ps:animation/add {ani_id:28}
 
+execute store result score #random_skin_id ps run random value 0..5
+execute as @e[type=interaction,tag=enter] on vehicle on passengers as @s[type=item_display] run function ps:gameplay/random_skin
+
 schedule function ps:gameplay/entersound 20s replace
