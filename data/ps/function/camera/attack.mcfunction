@@ -6,5 +6,5 @@ scoreboard players set @s ps_click_cd -5
 execute unless entity @s[tag=taking_shot] run return -1
 execute unless entity @e[type=interaction,tag=pose,distance=..20] run return -1
 
-tellraw @a "xxx: 换个姿势吧！"
+function ps:gameplay/dialogues/change_pose
 execute as @e[type=interaction,distance=..20,tag=pose] on vehicle run function ps:gameplay/random_pose
