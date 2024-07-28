@@ -34,7 +34,7 @@ scoreboard objectives add ps_music_cd custom:time_since_death
 execute unless data storage ps:ani available run data modify storage ps:ani available set value [1,2,3,4,5,6,7,8,9]
 execute unless data storage ps:game unlocks run function ps:inits/unlocks
 execute unless data storage ps:game current_deco run data modify storage ps:game current_deco set value {deco_1:0,deco_2:0,deco_3:0,deco_4:0,bg:0,outfit:0}
-execute unless data storage ps:game current_customer run data modify storage ps:game current_customer set value {hair:0,beard:0,eyes:0,tops:0,bottoms:0,special:0}
+#execute unless data storage ps:game current_customer run data modify storage ps:game current_customer set value {hair:0,beard:0,eyes:0,tops:0,bottoms:0,special:0}
 execute unless data storage ps:game gameplay run function ps:inits/gameplay
 
 #init animate data
