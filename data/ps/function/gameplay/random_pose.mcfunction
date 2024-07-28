@@ -1,4 +1,4 @@
-execute store result score #random_pose ps run random value 1..18
+execute store result score #random_pose ps run random value 1..20
 
 execute if score #random_pose ps matches 1 run function ps:animation/update {ani_id:7}
 execute if score #random_pose ps matches 2 run function ps:animation/update {ani_id:8}
@@ -18,3 +18,5 @@ execute if score #random_pose ps matches 15 run function ps:animation/update {an
 execute if score #random_pose ps matches 16 run function ps:animation/update {ani_id:22}
 execute if score #random_pose ps matches 17 run function ps:animation/update {ani_id:23}
 execute if score #random_pose ps matches 18 run function ps:animation/update {ani_id:24}
+execute if score #random_pose ps matches 19 run function ps:animation/update {ani_id:25}
+execute if score #random_pose ps matches 20 run function ps:animation/update {ani_id:26}

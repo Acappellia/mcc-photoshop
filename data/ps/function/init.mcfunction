@@ -63,6 +63,15 @@ function ps:inits/21_pose
 function ps:inits/22_pose
 function ps:inits/23_pose
 function ps:inits/24_pose
+function ps:inits/25_pose
+function ps:inits/26_pose
+function ps:inits/27_enter
+function ps:inits/28_enter
+function ps:inits/29_pedestrain
+function ps:inits/30_pedestrain
+function ps:inits/31_pedestrain
+function ps:inits/32_waiting_c
+function ps:inits/33_waiting_c
 
 forceload add 0 0 0 0
 
