@@ -23,5 +23,7 @@ execute as @a run function ps:player/check_place
 
 execute as @a run function ps:player/bgm
 
+item replace block 141 -24 800 container.0 with air
+
 execute as @a run scoreboard players operation @s ps_last_selecting_slot = @s ps_selecting_slot
 scoreboard players reset @a ps_jump
