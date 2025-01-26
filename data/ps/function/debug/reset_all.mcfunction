@@ -22,5 +22,3 @@ execute as 0-0-0-0-2 on passengers as @s[type=item_display] run function ps:game
 
 execute store result score #random_skin_id ps run random value 0..5
 execute as 0-0-0-0-3 on passengers as @s[type=item_display] run function ps:gameplay/random_skin
-
-data modify block 
